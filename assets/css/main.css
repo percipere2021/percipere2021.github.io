@@ -2850,13 +2850,18 @@ input, select, textarea {
 			}
 
 			#header .logo .symbol {
-				margin-right: 0.65em;
+			}
+
+			.center {
+				margin: 0 auto;
+				text-align: center;
 			}
 
 				#header .logo .symbol img {
-					display: block;
-					width: 2em;
-					height: 2em;
+					height: 14em;
+					width: 14em;
+					right: 6em;
+					border-radius: 50%;
 				}
 
 		#header nav {
