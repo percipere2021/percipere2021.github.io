@@ -1,6 +1,80 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #d62b2b;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #d62b2b;
+  color: white;
+}
+</style>
 		<title>Percipere 2021</title>
 		<link rel="icon" href="images/mainlogo.png">
 		<meta charset="utf-8" />
@@ -50,16 +124,37 @@
 						<div class="inner">
 							<h1>Turpis Tristique</h1>
 							<span class="image main"><center><img src="images/turpis.png" alt="" style="height: 18em; width:18em ;right:2em"></center></span>
-							<p>Do you have what it takes to convince the sharks to invest in your idea to make it the next big thing?  
-Our event, Turpis Tristique brings to you a platform to test your entrepreneurial skills. From coming up with an innovative idea that doesn’t exist to making a complete business plan to presenting it to the investors, this event will challenge all you know about building your own venture.  
+							<p>Gear up as you play the devil’s advocate and go neck and neck against the contenders from other teams, debating against and contradicting not just your opposition but even yourself?! Feel the rush as you speak in favour of as well as against the topic provided to you on-the-spot while being critiqued on your content, confidence and spontaneity. There’s no room for error as you attempt to sweep through the competition and clinch victory. So, will you rise to the occasion or fall prey to the heat of the moment and fumble? Only one way to find out. 
 
 </p>
-							<p> Requirements: Fair knowledge in making a business plan.  </p>
-							<p>No. of participants per team: 2 </p>
-							<p>No. of teams per school: 3 </p>
-							<p>No. of rounds:2   </p>
+							<p>Number of rounds: 2 </p>
+							<p>Event for individual participants: maximum 3 from each school </p>
+							<!-- Trigger/Open The Modal -->
+<center><button id="myBtn">Rules & Regulations</button></center>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p>Some text in the Modal Body</p>
+      <p>Some other text...</p>
+    </div>
+    <!-- <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div> -->
+  </div>
+
+</div>
 						</div>
 					</div>
+
+					
 
 						<!-- Footer -->
 		<footer id="footer">
@@ -95,9 +190,9 @@ Our event, Turpis Tristique brings to you a platform to test your entrepreneuria
 						<!--<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a>
 						</li>
 						<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-						<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-						<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>-->
+						<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>-->
+						<li><a href="tel:08023350361" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+						<li><a href="mailto:percipere2021@hotmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 				</section>
 				<ul class="copyright">
@@ -109,6 +204,33 @@ Our event, Turpis Tristique brings to you a platform to test your entrepreneuria
 			</div>
 
 		<!-- Scripts -->
+		<script>
+			// Get the modal
+			var modal = document.getElementById("myModal");
+			
+			// Get the button that opens the modal
+			var btn = document.getElementById("myBtn");
+			
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+			
+			// When the user clicks the button, open the modal 
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+			
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+			
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+			</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
